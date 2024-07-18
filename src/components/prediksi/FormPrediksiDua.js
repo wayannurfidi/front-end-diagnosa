@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import { db } from "../../config/Firebase";
 import { addDoc, collection, getDocs } from "firebase/firestore";
 
-const FormPasien = () => {
+const FormPrediksiDua = () => {
   const [listPasien, setListPasien] = useState([]);
   const [namaPasien, setNamaPasien] = useState("");
   const [pregnancies, setPregnancies] = useState(null);
@@ -53,7 +53,7 @@ const FormPasien = () => {
       };
       console.log(dataset);
       const response = await axios.post(
-        "http://localhost:5000/diabetes-cek-nb",
+        "http://localhost:5000/diabetes-cek-rf",
         dataset
       );
       Swal.fire({
@@ -66,7 +66,7 @@ const FormPasien = () => {
       // Simpan data ke firebase
       const dataPrediksi = {
         NamaPasien: namaPasien,
-        ModelPrediksi: "Naive Bayes",
+        ModelPrediksi: "Random Forest",
         Hasil: response.data.diagnosis,
         Pregnancies: parseFloat(pregnancies),
         Glucose: parseFloat(glucose),
@@ -81,19 +81,18 @@ const FormPasien = () => {
       await addDoc(collection(db, "PrediksiDiabetes"), dataPrediksi);
       console.log("Data atas nama: ", namaPasien, " berhasil disimpan!");
 
-      setPregnancies("");
-      setGlucose("");
-      setBloodPressure("");
-      setSkinThickness("");
-      setInsulin("");
-      setBmi("");
-      setDiabetesPedigreeFunction("");
-      setAge("");
+      setPregnancies(null);
+      setGlucose(null);
+      setBloodPressure(null);
+      setSkinThickness(null);
+      setInsulin(null);
+      setBmi(null);
+      setDiabetesPedigreeFunction(null);
+      setAge(null);
     } catch (error) {
       console.error("Error:", error);
     }
   };
-
   return (
     <>
       <Form>
@@ -265,4 +264,4 @@ const FormPasien = () => {
   );
 };
 
-export default FormPasien;
+export default FormPrediksiDua;

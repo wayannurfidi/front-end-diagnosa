@@ -7,6 +7,8 @@ import ModelPrediksi from "./contents/ModelPrediksi";
 import Pasien from "./contents/Pasien";
 import Admin from "./contents/Admin";
 import Login from "./contents/Login";
+import ModelPrediksiDua from "./contents/ModelPrediksiDua";
+import HasilPrediksi from "./contents/HasilPrediksi";
 
 const App = () => {
   const isLoggedIn = sessionStorage.getItem("isLoggedIn");
@@ -33,8 +35,16 @@ const App = () => {
                 <Route path="/dashboard" element={<Welcome />} />
                 <Route path="/dashboard/data-pasien" element={<Pasien />} />
                 <Route
-                  path="/dashboard/model-prediksi"
+                  path="/dashboard/model-prediksi-nb"
                   element={<ModelPrediksi />}
+                />
+                <Route
+                  path="/dashboard/model-prediksi-rf"
+                  element={<ModelPrediksiDua />}
+                />
+                <Route
+                  path="/dashboard/hasil-prediksi"
+                  element={<HasilPrediksi />}
                 />
                 <Route path="/dashboard/admin" element={<Admin />} />
               </Routes>

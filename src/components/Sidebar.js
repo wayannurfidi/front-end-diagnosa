@@ -10,7 +10,7 @@ const Sidebar = () => {
         id="accordionSidebar">
         <a
           className="sidebar-brand d-flex align-items-center justify-content-center"
-          href="index.html">
+          href="/">
           <div className="sidebar-brand-icon rotate-n-15">
             <i className="fas fa-laugh-wink" />
           </div>
@@ -41,11 +41,29 @@ const Sidebar = () => {
         </li>
         <li
           className={`nav-item ${
-            location.pathname === "/dashboard/model-prediksi" ? "active" : ""
+            location.pathname === "/dashboard/model-prediksi-nb" ? "active" : ""
           }`}>
-          <Link className="nav-link" to="/dashboard/model-prediksi">
+          <Link className="nav-link" to="/dashboard/model-prediksi-nb">
             <i className="fas fa-fw fa-chart-area" />
-            <span>Model Prediksi</span>
+            <span>Diagnosa Naive Bayes</span>
+          </Link>
+        </li>
+        <li
+          className={`nav-item ${
+            location.pathname === "/dashboard/model-prediksi-rf" ? "active" : ""
+          }`}>
+          <Link className="nav-link" to="/dashboard/model-prediksi-rf">
+            <i className="fas fa-fw fa-chart-area" />
+            <span>Diagnosa Random Forest</span>
+          </Link>
+        </li>
+        <li
+          className={`nav-item ${
+            location.pathname === "/dashboard/hasil-prediksi" ? "active" : ""
+          }`}>
+          <Link className="nav-link" to="/dashboard/hasil-prediksi">
+            <i className="fas fa-fw fa-chart-area" />
+            <span>Hasil Prediksi</span>
           </Link>
         </li>
         <li
