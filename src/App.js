@@ -9,6 +9,7 @@ import Admin from "./contents/Admin";
 import Login from "./contents/Login";
 import ModelPrediksiDua from "./contents/ModelPrediksiDua";
 import HasilPrediksi from "./contents/HasilPrediksi";
+import Register from "./contents/Register";
 
 const App = () => {
   const isLoggedIn = sessionStorage.getItem("isLoggedIn");
@@ -20,6 +21,7 @@ const App = () => {
       {isLoggedIn === null ? (
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       ) : isLoggedIn === "false" ? (
         <Routes>

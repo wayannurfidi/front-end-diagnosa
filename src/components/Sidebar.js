@@ -11,11 +11,11 @@ const Sidebar = () => {
         <a
           className="sidebar-brand d-flex align-items-center justify-content-center"
           href="/">
-          <div className="sidebar-brand-icon rotate-n-15">
-            <i className="fas fa-laugh-wink" />
+          <div className="sidebar-brand-icon ">
+            <i className="fas fa fa-medkit" />
           </div>
           <div className="sidebar-brand-text mx-3">
-            SB Admin <sup>2</sup>
+            Sistem Diagnosa
           </div>
         </a>
         <hr className="sidebar-divider my-0" />
@@ -35,7 +35,7 @@ const Sidebar = () => {
             location.pathname === "/dashboard/data-pasien" ? "active" : ""
           }`}>
           <Link className="nav-link" to="/dashboard/data-pasien">
-            <i className="fas fa-fw fa-chart-area" />
+            <i className="fas fa fa-child" />
             <span>Data Pasien</span>
           </Link>
         </li>
@@ -44,7 +44,7 @@ const Sidebar = () => {
             location.pathname === "/dashboard/model-prediksi-nb" ? "active" : ""
           }`}>
           <Link className="nav-link" to="/dashboard/model-prediksi-nb">
-            <i className="fas fa-fw fa-chart-area" />
+            <i className="fas fa fa-check-circle" />
             <span>Diagnosa Naive Bayes</span>
           </Link>
         </li>
@@ -53,7 +53,7 @@ const Sidebar = () => {
             location.pathname === "/dashboard/model-prediksi-rf" ? "active" : ""
           }`}>
           <Link className="nav-link" to="/dashboard/model-prediksi-rf">
-            <i className="fas fa-fw fa-chart-area" />
+            <i className="fas fa fa-tree" />
             <span>Diagnosa Random Forest</span>
           </Link>
         </li>
@@ -62,8 +62,8 @@ const Sidebar = () => {
             location.pathname === "/dashboard/hasil-prediksi" ? "active" : ""
           }`}>
           <Link className="nav-link" to="/dashboard/hasil-prediksi">
-            <i className="fas fa-fw fa-chart-area" />
-            <span>Hasil Prediksi</span>
+            <i className="fas fa fa-list-alt" />
+            <span>Hasil Diagnosa</span>
           </Link>
         </li>
         <li
@@ -71,7 +71,7 @@ const Sidebar = () => {
             location.pathname === "/dashboard/admin" ? "active" : ""
           }`}>
           <Link className="nav-link" to="/dashboard/admin">
-            <i className="fas fa-fw fa-chart-area" />
+            <i className="fas fa fa-users" />
             <span>Data Admin</span>
           </Link>
         </li>

@@ -2,14 +2,17 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
 import { getAuth } from "firebase/auth";
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBWAO_JiDL4EGgaYkRtR8zmgRsBp0uGKmk",
-  authDomain: "diabetes-3eaa7.firebaseapp.com",
-  projectId: "diabetes-3eaa7",
-  storageBucket: "diabetes-3eaa7.appspot.com",
-  messagingSenderId: "1009343470830",
-  appId: "1:1009343470830:web:4e60c03c78d82422a2a7ff",
+  apiKey: "AIzaSyCzg5s55bZLE1-TixAdYPwQpfWU-BRF5is",
+  authDomain: "diagnosadiabetes.firebaseapp.com",
+  projectId: "diagnosadiabetes",
+  storageBucket: "diagnosadiabetes.appspot.com",
+  messagingSenderId: "384420908539",
+  appId: "1:384420908539:web:9e8955283803bc2bcc0f5e"
 };
+
+
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);

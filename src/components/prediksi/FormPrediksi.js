@@ -81,14 +81,14 @@ const FormPasien = () => {
       await addDoc(collection(db, "PrediksiDiabetes"), dataPrediksi);
       console.log("Data atas nama: ", namaPasien, " berhasil disimpan!");
 
-      setPregnancies("");
-      setGlucose("");
-      setBloodPressure("");
-      setSkinThickness("");
-      setInsulin("");
-      setBmi("");
-      setDiabetesPedigreeFunction("");
-      setAge("");
+      // setPregnancies("");
+      // setGlucose("");
+      // setBloodPressure("");
+      // setSkinThickness("");
+      // setInsulin("");
+      // setBmi("");
+      // setDiabetesPedigreeFunction("");
+      // setAge("");
     } catch (error) {
       console.error("Error:", error);
     }
@@ -258,7 +258,7 @@ const FormPasien = () => {
           <span className="icon text-white-50">
             <i className="fas fa-check" />
           </span>
-          <span className="text">Prediksi diabetes</span>
+          <span className="text">Diagnosa Diabetes</span>
         </button>
       </div>
     </>

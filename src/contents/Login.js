@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { auth } from "../config/Firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -51,7 +52,7 @@ const Login = () => {
                 <div className="col-sm-8 mx-auto">
                   <div className="py-2">
                     <div className="text-center">
-                      <h1 className="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                      <h1 className="h4 text-gray-900 mb-4">Login!</h1>
                     </div>
                     <form className="user">
                       <div className="form-group">
@@ -80,6 +81,13 @@ const Login = () => {
                         Login
                       </button>
                     </form>
+                    <hr />
+                    <div className="text-center">
+                      <p className="small">
+                        Belum memiliki akun?
+                        <Link to="/register"> Daftar!</Link>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
